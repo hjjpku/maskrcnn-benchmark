@@ -5,9 +5,9 @@ import os
 
 import torch
 from maskrcnn_benchmark.utils.model_serialization import load_state_dict
+from maskrcnn_benchmark.utils.c2_model_loading import load_c2_format
 
-
-def get_checkpoint_file(path):
+def get_model_file(path):
     save_file = path
     try:
         with open(save_file, "r") as f:
